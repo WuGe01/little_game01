@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./plugins/sweetalert2.all.js"></script>
+</head>
+
+<body>
+
+    <script>
+        window.onload = () => {
+
+            Swal.fire({
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#3085d6',
+                title: '角色創建',
+                imageUrl: 'https://picsum.photos/400/300/?random=1',
+                text: '請輸入人物姓名',
+                showCancelButton: true,
+                confirmButtonText: '正確',
+                cancelButtonText: '錯誤',
+
+            }).then((result) => {
+                if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire({
+                        confirmButtonColor: '#3085d6',
+                        title: 'GG1',
+                        imageUrl: 'https://picsum.photos/400/300/?random=1',
+                        text: '請輸入人物姓名',
+                        showCancelButton: false,
+                        confirmButtonText: '選項離開',
+                    }
+                    )
+                } else if (result.value) {
+                    Swal.fire({
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#3085d6',
+                        title: '提問1',
+                        imageUrl: 'https://picsum.photos/400/300/?random=1',
+                        text: '請輸入人物姓名',
+                        showCancelButton: true,
+                        confirmButtonText: '正確',
+                        cancelButtonText: '錯誤',
+                        reverseButtons: true
+
+                    }).then((result) => {
+                        if (result.dismiss === Swal.DismissReason.cancel) {
+                            Swal.fire({
+                                confirmButtonColor: '#3085d6',
+                                title: 'GG2',
+                                imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                text: '請輸入人物姓名',
+                                showCancelButton: false,
+                                confirmButtonText: '選項離開',
+                            }
+                            )
+                        } else if (result.value) {
+                            Swal.fire({
+                                confirmButtonColor: '#3085d6',
+                                cancelButtonColor: '#3085d6',
+                                title: '提問2',
+                                imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                text: '請輸入人物姓名',
+                                showCancelButton: true,
+                                confirmButtonText: '正確',
+                                cancelButtonText: '錯誤',
+
+                            }).then((result) => {
+                                if (result.dismiss === Swal.DismissReason.cancel) {
+                                    Swal.fire({
+                                        confirmButtonColor: '#3085d6',
+                                        title: 'GG3',
+                                        imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                        text: '請輸入人物姓名',
+                                        showCancelButton: false,
+                                        confirmButtonText: '選項離開',
+                                    }
+                                    )
+                                } else if (result.value) {
+                                    Swal.fire({
+                                        confirmButtonColor: '#3085d6',
+                                        cancelButtonColor: '#3085d6',
+                                        title: '提問3',
+                                        imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                        text: '請輸入人物姓名',
+                                        showCancelButton: true,
+                                        confirmButtonText: '正確',
+                                        cancelButtonText: '錯誤',
+
+
+                                    }).then((result) => {
+                                        if (result.dismiss === Swal.DismissReason.cancel) {
+                                            Swal.fire({
+                                                confirmButtonColor: '#3085d6',
+                                                title: 'GG4',
+                                                imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                                text: '請輸入人物姓名',
+                                                showCancelButton: false,
+                                                confirmButtonText: '選項離開',
+                                            }
+                                            )
+                                        } else if (result.value) {
+                                            Swal.fire({
+                                                confirmButtonColor: '#3085d6',
+                                                cancelButtonColor: '#3085d6',
+                                                title: '提問4',
+                                                imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                                text: '請輸入人物姓名',
+                                                showCancelButton: true,
+                                                confirmButtonText: '正確',
+                                                cancelButtonText: '錯誤',
+
+                                            }).then((result) => {
+                                                if (result.dismiss === Swal.DismissReason.cancel) {
+                                                    Swal.fire({
+                                                        confirmButtonColor: '#3085d6',
+                                                        title: 'GG5',
+                                                        imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                                        text: '請輸入人物姓名',
+                                                        showCancelButton: false,
+                                                        confirmButtonText: '選項離開',
+                                                    }
+                                                    )
+                                                } else if (result.value) {
+                                                    Swal.fire({
+                                                        confirmButtonColor: '#3085d6',
+                                                        cancelButtonColor: '#3085d6',
+                                                        title: '提問5',
+                                                        imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                                        text: '請輸入人物姓名',
+                                                        showCancelButton: true,
+                                                        confirmButtonText: '正確',
+                                                        cancelButtonText: '錯誤',
+                                                        reverseButtons: true
+
+                                                    }).then((result) => {
+                                                        if (result.dismiss === Swal.DismissReason.cancel) {
+                                                            Swal.fire({
+                                                                confirmButtonColor: '#3085d6',
+                                                                title: 'GG6',
+                                                                imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                                                text: '請輸入人物姓名',
+                                                                showCancelButton: false,
+                                                                confirmButtonText: '選項離開',
+                                                            }
+                                                            )
+                                                        } else if (result.value) {
+                                                            Swal.fire({
+                                                                confirmButtonColor: '#3085d6',
+                                                                cancelButtonColor: '#3085d6',
+                                                                title: '結局',
+                                                                imageUrl: 'https://picsum.photos/400/300/?random=1',
+                                                                text: '請輸入人物姓名',
+                                                                showCancelButton: false,
+                                                                confirmButtonText: '選項離開',
+
+                                                            })
+                                                        }
+                                                    })
+                                                }
+                                            })
+                                        }
+                                    })
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
