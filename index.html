@@ -27,13 +27,21 @@
                 if (result.dismiss === Swal.DismissReason.cancel) {
                     Swal.fire({
                         confirmButtonColor: '#3085d6',
-                        title: '男耕女織',
+                        title: '腳踏實地',
+                        imageUrl: './img/1-02-01-01.jpg',
+                        text: '腳踏實地的你，再耕種之餘研究著肥料，並計算出最經濟性的耕種方式，成為聞名四鄰的富農',
+                        showCancelButton: false,
+                        confirmButtonText: '努力向上',
+                    }).then(()=>{
+                        Swal.fire({
+                        confirmButtonColor: '#3085d6',
+                        title: '結局-男耕女織',
                         imageUrl: './img/1-02-01.jpg',
-                        text: '腳踏實地的你，再耕種之餘研究著肥料，並計算出最經濟性的耕種方式，成為聞名四鄰的富農，並迎娶隔壁村的村花，小美過著男耕女織的生活，對著江湖武俠的嚮往漸漸淡忘，專心的養兒育女',
+                        text: '並迎娶隔壁村的村花，小美過著男耕女織的生活,對著江湖武俠的嚮往漸漸淡忘，專心的養兒育女',
                         showCancelButton: false,
                         confirmButtonText: '這樣的人生也不錯',
-                    }
-                    )
+                    })                    
+                    })                
                 } else if (result.value) {
                     Swal.fire({
                         confirmButtonColor: '#3085d6',
