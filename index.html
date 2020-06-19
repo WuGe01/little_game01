@@ -5,289 +5,314 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>武俠過五關</title>
+    <link rel="stylesheet" href="./plugins/bootstrap.css">
     <script src="./plugins/sweetalert2.all.js"></script>
 </head>
 
 <body style="background-image: url(./black/01.jpg);background-size: cover">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <input class="btn btn-outline-secondary" type="button" value="再來一次" onclick="aa()">
+    </div>
 
     <script>
         window.onload = () => {
+            aa();
+        }
+          function aa() {
+                Swal.fire({
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#3085d6',
+                    title: '千載良機',
+                    imageUrl: './img/1-01-01.jpg',
+                    text: '身為龍套村的一員龍套乙，你在這個村莊過著與江湖武俠世界無緣日復一日的農耕生活，但在一個偶然的機會你聽到一個消息，名門主角派，在江口處招新門徒，嚮往武俠世界的你馬上就意識到，這一個成為主角的好機會，你決定如何呢?',
+                    showCancelButton: true,
+                    confirmButtonText: '當然是散盡家財也要去爭取這個機會拉',
+                    cancelButtonText: '還腳踏實地吧，當個農夫也不錯呀',
 
-            Swal.fire({
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#3085d6',
-                title: '千載良機',
-                imageUrl: './img/1-01-01.jpg',
-                text: '身為龍套村的一員龍套乙，你在這個村莊過著與江湖武俠世界無緣日復一日的農耕生活，但在一個偶然的機會你聽到一個消息，名門主角派，在江口處招新門徒，嚮往武俠世界的你馬上就意識到，這一個成為主角的好機會，你決定如何呢?',
-                showCancelButton: true,
-                confirmButtonText: '當然是散盡家財也要去爭取這個機會拉',
-                cancelButtonText: '還腳踏實地吧，當個農夫也不錯呀',
-
-            }).then((result) => {
-                if (result.dismiss === Swal.DismissReason.cancel) {
-                    Swal.fire({
-                        confirmButtonColor: '#3085d6',
-                        title: '腳踏實地',
-                        imageUrl: './img/1-02-01-01.jpg',
-                        text: '腳踏實地的你，再耕種之餘研究著肥料，並計算出最經濟性的耕種方式，成為聞名四鄰的富農',
-                        showCancelButton: false,
-                        confirmButtonText: '努力向上',
-                    }).then(() => {
+                }).then((result) => {
+                    if (result.dismiss === Swal.DismissReason.cancel) {
                         Swal.fire({
                             confirmButtonColor: '#3085d6',
-                            title: '迎娶小美',
-                            imageUrl: './img/1-02-01-02.jpg',
-                            text: '並迎娶隔壁村的村花，小美過著男耕女織的生活',
+                            title: '腳踏實地',
+                            imageUrl: './img/1-02-01-01.jpg',
+                            text: '腳踏實地的你，再耕種之餘研究著肥料，並計算出最經濟性的耕種方式，成為聞名四鄰的富農',
                             showCancelButton: false,
-                            confirmButtonText: '踏上人生的殿堂',
+                            confirmButtonText: '努力向上',
                         }).then(() => {
                             Swal.fire({
                                 confirmButtonColor: '#3085d6',
-                                title: '結局-男耕女織',
-                                imageUrl: './img/1-02-01.jpg',
-                                text: '對著江湖武俠的嚮往漸漸淡忘，專心的養兒育女',
+                                title: '迎娶小美',
+                                imageUrl: './img/1-02-01-02.jpg',
+                                text: '並迎娶隔壁村的村花，小美過著男耕女織的生活',
                                 showCancelButton: false,
-                                confirmButtonText: '這樣的人生也不錯',
+                                confirmButtonText: '踏上人生的殿堂',
+                            }).then(() => {
+                                Swal.fire({
+                                    confirmButtonColor: '#3085d6',
+                                    title: '結局-男耕女織',
+                                    imageUrl: './img/1-02-01.jpg',
+                                    text: '對著江湖武俠的嚮往漸漸淡忘，專心的養兒育女',
+                                    showCancelButton: false,
+                                    confirmButtonText: '這樣的人生也不錯',
+                                })
                             })
                         })
-                    })
-                } else if (result.value) {
-                    Swal.fire({
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#3085d6',
-                        title: '破釜沉舟',
-                        imageUrl: './img/1-03-01.jpg',
-                        text: '於是你為了拜入主角派門下，散盡家財賣田賣地，只為成為江湖中的主角，賭上自己的一切',
-                        showCancelButton: false,
-                        confirmButtonText: '沒有退路了',
+                    } else if (result.value) {
+                        Swal.fire({
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#3085d6',
+                            title: '破釜沉舟',
+                            imageUrl: './img/1-03-01.jpg',
+                            text: '於是你為了拜入主角派門下，散盡家財賣田賣地，只為成為江湖中的主角，賭上自己的一切',
+                            showCancelButton: false,
+                            confirmButtonText: '沒有退路了',
 
-                    }).then((result) => {
-                        if (result.value) {
-                            Swal.fire({//問題1
-                                confirmButtonColor: '#3085d6',
-                                cancelButtonColor: '#3085d6',
-                                title: '人山人海',
-                                imageUrl: './img/02-01-01.jpg',
-                                text: '到了江口處，一眼望去人山人海，到處都是大排長龍想拜入主角派門下的們人，這時有位賊頭賊眼八字鬍鼠輩般的中年人，走到你的面前向你兜售『黃牛票』，說可以減少排隊的時間，但是要耗費你一半的家產，試問意下如何?',
-                                showCancelButton: true,
-                                confirmButtonText: '氪氪，時間就是金錢',
-                                cancelButtonText: '開什麼玩笑，這也太貴了吧',
+                        }).then((result) => {
+                            if (result.value) {
+                                Swal.fire({//問題1
+                                    confirmButtonColor: '#3085d6',
+                                    cancelButtonColor: '#3085d6',
+                                    title: '人山人海',
+                                    imageUrl: './img/02-01-01.jpg',
+                                    text: '到了江口處，一眼望去人山人海，到處都是大排長龍想拜入主角派門下的們人，這時有位賊頭賊眼八字鬍鼠輩般的中年人，走到你的面前向你兜售『黃牛票』，說可以減少排隊的時間，但是要耗費你一半的家產，試問意下如何?',
+                                    showCancelButton: true,
+                                    confirmButtonText: '氪氪，時間就是金錢',
+                                    cancelButtonText: '開什麼玩笑，這也太貴了吧',
 
-                            }).then((result) => {
-                                if (result.dismiss === Swal.DismissReason.cancel) {
-                                    Swal.fire({
-                                        confirmButtonColor: '#3085d6',
-                                        title: '經濟危機',
-                                        imageUrl: './img/02-02-01.jpg',
-                                        text: '日復一日的排隊，看著隊伍人數一直都沒少，以及聽到主角派預約招生已經排到三、五年的消息，你覺得坐吃空山下不行',
-                                        showCancelButton: false,
-                                        confirmButtonText: '必須做點甚麼',
-                                    }
-                                    ).then(() => {
+                                }).then((result) => {
+                                    if (result.dismiss === Swal.DismissReason.cancel) {
                                         Swal.fire({
                                             confirmButtonColor: '#3085d6',
-                                            title: '危機就是轉機',
-                                            imageUrl: './img/02-02-02.jpg',
-                                            text: '於是開始用自己的全家家產與山間生活的烤野味技術，做起的小買賣，不料生意興隆，三年間從路邊小吃，變成三層樓的高江口客棧日復一日迷失在賺錢的漩渦之中',
+                                            title: '經濟危機',
+                                            imageUrl: './img/02-02-01.jpg',
+                                            text: '日復一日的排隊，看著隊伍人數一直都沒少，以及聽到主角派預約招生已經排到三、五年的消息，你覺得坐吃空山下不行',
                                             showCancelButton: false,
-                                            confirmButtonText: '有錢真好',
-                                        }).then(() => {
+                                            confirmButtonText: '必須做點甚麼',
+                                        }
+                                        ).then(() => {
                                             Swal.fire({
                                                 confirmButtonColor: '#3085d6',
-                                                title: '結局-生意興隆',
-                                                imageUrl: './img/02-02-03.jpg',
-                                                text: '成為大富豪，遺忘自己拜師學藝的目標，整天機算著資產收益',
+                                                title: '危機就是轉機',
+                                                imageUrl: './img/02-02-02.jpg',
+                                                text: '於是開始用自己的全家家產與山間生活的烤野味技術，做起的小買賣，不料生意興隆，三年間從路邊小吃，變成三層樓的高江口客棧日復一日迷失在賺錢的漩渦之中',
                                                 showCancelButton: false,
-                                                confirmButtonText: '有錢還學什麼武',
+                                                confirmButtonText: '有錢真好',
+                                            }).then(() => {
+                                                Swal.fire({
+                                                    confirmButtonColor: '#3085d6',
+                                                    title: '結局-生意興隆',
+                                                    imageUrl: './img/02-02-03.jpg',
+                                                    text: '成為大富豪，遺忘自己拜師學藝的目標，整天機算著資產收益',
+                                                    showCancelButton: false,
+                                                    confirmButtonText: '有錢還學什麼武',
+                                                })
                                             })
                                         })
-                                    })
-                                } else if (result.value) {
-                                    Swal.fire({
-                                        confirmButtonColor: '#3085d6',
-                                        cancelButtonColor: '#3085d6',
-                                        title: '氪氪強者',
-                                        imageUrl: './img/02-03-01.jpg',
-                                        text: '不氪金怎麼變強呢，拿著『黃牛票』的你，迅速通關，看這身後排隊愚蠢的人們，抱持著優越感當上前往主角派的船隻',
-                                        showCancelButton: false,
-                                        confirmButtonText: '沒錢還學什麼武',
+                                    } else if (result.value) {
+                                        Swal.fire({
+                                            confirmButtonColor: '#3085d6',
+                                            cancelButtonColor: '#3085d6',
+                                            title: '氪氪強者',
+                                            imageUrl: './img/02-03-01.jpg',
+                                            text: '不氪金怎麼變強呢，拿著『黃牛票』的你，迅速通關，看這身後排隊愚蠢的人們，抱持著優越感當上前往主角派的船隻',
+                                            showCancelButton: false,
+                                            confirmButtonText: '沒錢還學什麼武',
 
 
-                                    }).then((result) => {
-                                        if (result.value) {
-                                            Swal.fire({//問題2
-                                                confirmButtonColor: '#3085d6',
-                                                cancelButtonColor: '#3085d6',
-                                                title: '禍不單行',
-                                                imageUrl: './img/03-01-01.jpg',
-                                                text: '拿著『黃牛票』的你，被全副武裝的檢票人員發現，被要挾行賄不然揭發你，需要花費你剩下的全部家產，怎麼辦?',
-                                                showCancelButton: true,
-                                                confirmButtonText: '忍一時風平浪靜，退一時海闊天空',
-                                                cancelButtonText: '開甚麼玩笑',
-                                                reverseButtons: true
+                                        }).then((result) => {
+                                            if (result.value) {
+                                                Swal.fire({//問題2
+                                                    confirmButtonColor: '#3085d6',
+                                                    cancelButtonColor: '#3085d6',
+                                                    title: '禍不單行',
+                                                    imageUrl: './img/03-01-01.jpg',
+                                                    text: '拿著『黃牛票』的你，被全副武裝的檢票人員發現，被要挾行賄不然揭發你，需要花費你剩下的全部家產，怎麼辦?',
+                                                    showCancelButton: true,
+                                                    confirmButtonText: '忍一時風平浪靜，退一時海闊天空',
+                                                    cancelButtonText: '開甚麼玩笑',
+                                                    reverseButtons: true
 
-                                            }).then((result) => {
-                                                if (result.dismiss === Swal.DismissReason.cancel) {
-                                                    Swal.fire({
-                                                        confirmButtonColor: '#3085d6',
-                                                        title: '落水之夜',
-                                                        imageUrl: './img/03-02-01-01.jpg',
-                                                        text: '『黃牛票』被發現的你，在憤怒的人群包圍之下，被推下的水中，在激流中漂流一天一夜',
-                                                        showCancelButton: false,
-                                                        confirmButtonText: '還好我會游泳',
-                                                    }
-                                                    ).then(() => {
+                                                }).then((result) => {
+                                                    if (result.dismiss === Swal.DismissReason.cancel) {
                                                         Swal.fire({
                                                             confirmButtonColor: '#3085d6',
-                                                            title: '落水為寇',
-                                                            imageUrl: './img/03-02-01-02.jpg',
-                                                            text: '好不容易上岸的你，發現自己身無分文，只好幹起打劫的勾當',
+                                                            title: '落水之夜',
+                                                            imageUrl: './img/03-02-01-01.jpg',
+                                                            text: '『黃牛票』被發現的你，在憤怒的人群包圍之下，被推下的水中，在激流中漂流一天一夜',
                                                             showCancelButton: false,
-                                                            confirmButtonText: '搶錢搶糧搶娘們',
-                                                        }).then(() => {
+                                                            confirmButtonText: '還好我會游泳',
+                                                        }
+                                                        ).then(() => {
                                                             Swal.fire({
                                                                 confirmButtonColor: '#3085d6',
-                                                                title: '結局-洞庭湖賊',
-                                                                imageUrl: './img/03-02-01.jpg',
-                                                                text: '數年之後，你成為了洞庭湖手下數千名，禍害一方有名的洞庭湖大盜',
+                                                                title: '落水為寇',
+                                                                imageUrl: './img/03-02-01-02.jpg',
+                                                                text: '好不容易上岸的你，發現自己身無分文，只好幹起打劫的勾當',
                                                                 showCancelButton: false,
-                                                                confirmButtonText: '大盜不止',
+                                                                confirmButtonText: '搶錢搶糧搶娘們',
+                                                            }).then(() => {
+                                                                Swal.fire({
+                                                                    confirmButtonColor: '#3085d6',
+                                                                    title: '結局-洞庭湖賊',
+                                                                    imageUrl: './img/03-02-01.jpg',
+                                                                    text: '數年之後，你成為了洞庭湖手下數千名，禍害一方有名的洞庭湖大盜',
+                                                                    showCancelButton: false,
+                                                                    confirmButtonText: '大盜不止',
+                                                                })
                                                             })
                                                         })
-                                                    })
-                                                } else if (result.value) {
-                                                    Swal.fire({
-                                                        confirmButtonColor: '#3085d6',
-                                                        cancelButtonColor: '#3085d6',
-                                                        title: '忍辱負重',
-                                                        imageUrl: './img/03-03-01.jpg',
-                                                        text: '想起韓信當年胯下之辱，你暗道『君子報仇十年不晚』交出所有家產',
-                                                        showCancelButton: false,
-                                                        confirmButtonText: '給我記住!!',
+                                                    } else if (result.value) {
+                                                        Swal.fire({
+                                                            confirmButtonColor: '#3085d6',
+                                                            cancelButtonColor: '#3085d6',
+                                                            title: '忍辱負重',
+                                                            imageUrl: './img/03-03-01.jpg',
+                                                            text: '想起韓信當年胯下之辱，你暗道『君子報仇十年不晚』交出所有家產',
+                                                            showCancelButton: false,
+                                                            confirmButtonText: '給我記住!!',
 
-                                                    }).then((result) => {
-                                                        if (result.value) {
-                                                            Swal.fire({//問題3
-                                                                confirmButtonColor: '#3085d6',
-                                                                cancelButtonColor: '#3085d6',
-                                                                title: '一而再三',
-                                                                imageUrl: './img/04-01-01.jpg',
-                                                                text: '本以為風平浪靜的你，在登往主角山的時候，被索取學費不然離開，但已經身無分文的你根本付不起學費，這時對方給你一個當雜役已抵學雜費的機會',
-                                                                showCancelButton: true,
-                                                                confirmButtonText: '一文錢難倒英雄漢，當吧',
-                                                                cancelButtonText: '幹!甚麼主角派根本詐騙集團!!',
+                                                        }).then((result) => {
+                                                            if (result.value) {
+                                                                Swal.fire({//問題3
+                                                                    confirmButtonColor: '#3085d6',
+                                                                    cancelButtonColor: '#3085d6',
+                                                                    title: '一而再三',
+                                                                    imageUrl: './img/04-01-01.jpg',
+                                                                    text: '本以為風平浪靜的你，在登往主角山的時候，被索取學費不然離開，但已經身無分文的你根本付不起學費，這時對方給你一個當雜役已抵學雜費的機會',
+                                                                    showCancelButton: true,
+                                                                    confirmButtonText: '一文錢難倒英雄漢，當吧',
+                                                                    cancelButtonText: '幹!甚麼主角派根本詐騙集團!!',
 
-                                                            }).then((result) => {
-                                                                if (result.dismiss === Swal.DismissReason.cancel) {
-                                                                    Swal.fire({
-                                                                        confirmButtonColor: '#3085d6',
-                                                                        title: '墜入山涯',
-                                                                        imageUrl: './img/04-02-01.jpg',
-                                                                        text: '口出狂言的你被人推下山涯',
-                                                                        showCancelButton: false,
-                                                                        confirmButtonText: '主角派給我記住',
-                                                                    }
-                                                                    ).then(() => {
+                                                                }).then((result) => {
+                                                                    if (result.dismiss === Swal.DismissReason.cancel) {
                                                                         Swal.fire({
                                                                             confirmButtonColor: '#3085d6',
-                                                                            title: '山涯奇遇',
-                                                                            imageUrl: './img/04-02-01-01.jpg',
-                                                                            text: '確意外習的絕世無武『專滅主角訣』，出關後大開殺戒，滅主角派',
+                                                                            title: '墜入山涯',
+                                                                            imageUrl: './img/04-02-01.jpg',
+                                                                            text: '口出狂言的你被人推下山涯',
                                                                             showCancelButton: false,
-                                                                            confirmButtonText: '看我絕世神功',
-                                                                        }).then(() => {
+                                                                            confirmButtonText: '主角派給我記住',
+                                                                        }
+                                                                        ).then(() => {
                                                                             Swal.fire({
                                                                                 confirmButtonColor: '#3085d6',
-                                                                                title: '結局-正邪對立',
-                                                                                imageUrl: './img/04-02-01-02.jpg',
-                                                                                text: '不料卻有一子逃過一劫，喊出『三十年河東，三十年河西，莫欺少年窮』的主角派弟子，後來成為你的心腹大患',
+                                                                                title: '山涯奇遇',
+                                                                                imageUrl: './img/04-02-01-01.jpg',
+                                                                                text: '確意外習的絕世無武『專滅主角訣』，出關後大開殺戒，滅主角派',
                                                                                 showCancelButton: false,
-                                                                                confirmButtonText: '反派誕生',
+                                                                                confirmButtonText: '看我絕世神功',
+                                                                            }).then(() => {
+                                                                                Swal.fire({
+                                                                                    confirmButtonColor: '#3085d6',
+                                                                                    title: '結局-正邪對立',
+                                                                                    imageUrl: './img/04-02-01-02.jpg',
+                                                                                    text: '不料卻有一子逃過一劫，喊出『三十年河東，三十年河西，莫欺少年窮』的主角派弟子，後來成為你的心腹大患',
+                                                                                    showCancelButton: false,
+                                                                                    confirmButtonText: '反派誕生',
+                                                                                })
                                                                             })
                                                                         })
-                                                                    })
-                                                                } else if (result.value) {
-                                                                    Swal.fire({
-                                                                        confirmButtonColor: '#3085d6',
-                                                                        cancelButtonColor: '#3085d6',
-                                                                        title: '發憤圖強',
-                                                                        imageUrl: './img/04-03-01.jpg',
-                                                                        text: '就算身為雜役你仍然未忘記自己武俠夢，努力地抽出時間去藏金閣學習武藝，短短數年間，並在年末大比成為冠軍，你已經是一流高手',
-                                                                        showCancelButton: false,
-                                                                        confirmButtonText: '武術高手',
+                                                                    } else if (result.value) {
+                                                                        Swal.fire({
+                                                                            confirmButtonColor: '#3085d6',
+                                                                            cancelButtonColor: '#3085d6',
+                                                                            title: '發憤圖強',
+                                                                            imageUrl: './img/04-03-01.jpg',
+                                                                            text: '就算身為雜役你仍然未忘記自己武俠夢，努力地抽出時間去藏金閣學習武藝，短短數年間，並在年末大比成為冠軍，你已經是一流高手',
+                                                                            showCancelButton: false,
+                                                                            confirmButtonText: '武術高手',
 
-                                                                    }).then((result) => {
-                                                                        if (result.value) {
-                                                                            Swal.fire({//問題4
-                                                                                confirmButtonColor: '#3085d6',
-                                                                                cancelButtonColor: '#3085d6',
-                                                                                title: '偷師疑雲',
-                                                                                imageUrl: './img/05-01-01.jpg',
-                                                                                text: '但是身為雜役，遽然可以成為比武冠軍，卻被人忌妒陷害，誣告你偷師，主角派掌門逼你自廢武功，如何是好?',
-                                                                                showCancelButton: true,
-                                                                                confirmButtonText: '高喊『我的命不由天!』',
-                                                                                cancelButtonText: '去死把主角派!!(先下手為強)',
-                                                                                reverseButtons: true
+                                                                        }).then((result) => {
+                                                                            if (result.value) {
+                                                                                Swal.fire({//問題4
+                                                                                    confirmButtonColor: '#3085d6',
+                                                                                    cancelButtonColor: '#3085d6',
+                                                                                    title: '偷師疑雲',
+                                                                                    imageUrl: './img/05-01-01.jpg',
+                                                                                    text: '但是身為雜役，遽然可以成為比武冠軍，卻被人忌妒陷害，誣告你偷師，主角派掌門逼你自廢武功，如何是好?',
+                                                                                    showCancelButton: true,
+                                                                                    confirmButtonText: '高喊『我的命不由天!』',
+                                                                                    cancelButtonText: '去死把主角派!!(先下手為強)',
+                                                                                    reverseButtons: true
 
-                                                                            }).then((result) => {
-                                                                                if (result.dismiss === Swal.DismissReason.cancel) {
-                                                                                    Swal.fire({
-                                                                                        confirmButtonColor: '#3085d6',
-                                                                                        title: '武功被廢',
-                                                                                        imageUrl: './img/05-02-01-01.jpg',
-                                                                                        text: '雖然你武功大成，但雙拳難敵四手，在眾人的圍攻一下，你仍廢了武功趕下山',
-                                                                                        showCancelButton: false,
-                                                                                        confirmButtonText: '時代變了',
-                                                                                    }
-                                                                                    ).then(() => {
+                                                                                }).then((result) => {
+                                                                                    if (result.dismiss === Swal.DismissReason.cancel) {
                                                                                         Swal.fire({
                                                                                             confirmButtonColor: '#3085d6',
-                                                                                            title: '工業革命',
-                                                                                            imageUrl: './img/05-02-01.jpg',
-                                                                                            text: '但是藏金閣的學習的知識仍在你的腦海之中，你用著知識引發的工業革命',
+                                                                                            title: '武功被廢',
+                                                                                            imageUrl: './img/05-02-01-01.jpg',
+                                                                                            text: '雖然你武功大成，但雙拳難敵四手，在眾人的圍攻一下，你仍廢了武功趕下山',
                                                                                             showCancelButton: false,
-                                                                                            confirmButtonText: '知識就是力量',
+                                                                                            confirmButtonText: '時代變了',
+                                                                                        }
+                                                                                        ).then(() => {
+                                                                                            Swal.fire({
+                                                                                                confirmButtonColor: '#3085d6',
+                                                                                                title: '工業革命',
+                                                                                                imageUrl: './img/05-02-01.jpg',
+                                                                                                text: '但是藏金閣的學習的知識仍在你的腦海之中，你用著知識引發的工業革命',
+                                                                                                showCancelButton: false,
+                                                                                                confirmButtonText: '知識就是力量',
+                                                                                            }).then(() => {
+                                                                                                Swal.fire({
+                                                                                                    confirmButtonColor: '#3085d6',
+                                                                                                    title: '結局-工業時代',
+                                                                                                    imageUrl: './img/05-02-01-02.jpg',
+                                                                                                    text: '數十年後，你帶著數名火槍手槍殺上的主角山，主角派滅',
+                                                                                                    showCancelButton: false,
+                                                                                                    confirmButtonText: '時代變了',
+                                                                                                })
+                                                                                            })
+                                                                                        })
+                                                                                    } else if (result.value) {
+                                                                                        Swal.fire({
+                                                                                            confirmButtonColor: '#3085d6',
+                                                                                            cancelButtonColor: '#3085d6',
+                                                                                            title: '突破功法',
+                                                                                            imageUrl: './img/05-03-01.jpg',
+                                                                                            text: '在喊這句話的時候，心境大變，修練多久的『主角訣』突破成為『真．主角訣』',
+                                                                                            showCancelButton: false,
+                                                                                            confirmButtonText: '我的命不由天',
+
                                                                                         }).then(() => {
                                                                                             Swal.fire({
                                                                                                 confirmButtonColor: '#3085d6',
-                                                                                                title: '結局-工業時代',
-                                                                                                imageUrl: './img/05-02-01-02.jpg',
-                                                                                                text: '數十年後，你帶著數名火槍手槍殺上的主角山，主角派滅',
+                                                                                                title: '無敵天下',
+                                                                                                imageUrl: './img/05-03-02.jpg',
+                                                                                                text: '舉成為門派中的最強者，大敗眾人後，主角派掌門驚呀你的武功，當眾拜你為師，重此後你就是掌門了，但你拒絕了',
                                                                                                 showCancelButton: false,
-                                                                                                confirmButtonText: '時代變了',
+                                                                                                confirmButtonText: '我能打十個',
+                                                                                            }).then(() => {
+                                                                                                Swal.fire({
+                                                                                                    confirmButtonColor: '#3085d6',
+                                                                                                    title: '結局-真主角派',
+                                                                                                    imageUrl: './img/05-03-03.jpg',
+                                                                                                    text: '你離開了主角派，新建的真主角山莊，有教無類，成為新興的名門大派',
+                                                                                                    showCancelButton: false,
+                                                                                                    confirmButtonText: '我是真主角掌門',
+                                                                                                })
                                                                                             })
                                                                                         })
-                                                                                    })
-                                                                                } else if (result.value) {
-                                                                                    Swal.fire({
-                                                                                        confirmButtonColor: '#3085d6',
-                                                                                        cancelButtonColor: '#3085d6',
-                                                                                        title: '我的命不由天',
-                                                                                        imageUrl: './img/05-03-01.jpg',
-                                                                                        text: '在喊這句話的時候，心境大變，修練多久的『主角訣』突破成為『真．主角訣』，一舉成為門派中的最強者，大敗眾人後，主角派掌門驚呀你的武功，當眾拜你為師，重此後你就是掌門了',
-                                                                                        showCancelButton: false,
-                                                                                        confirmButtonText: '我是主角?',
-
-                                                                                    })
-                                                                                }
-                                                                            })
-                                                                        }
-                                                                    })
-                                                                }
-                                                            })
-                                                        }
-                                                    })
-                                                }
-                                            })
-                                        }
-                                    })
-                                }
-                            })
-                        }
-                    })
-                }
-            })
-        }
+                                                                                    }
+                                                                                })
+                                                                            }
+                                                                        })
+                                                                    }
+                                                                })
+                                                            }
+                                                        })
+                                                    }
+                                                })
+                                            }
+                                        })
+                                    }
+                                })
+                            }
+                        })
+                    }
+                })
+            }
+        
     </script>
 </body>
 
